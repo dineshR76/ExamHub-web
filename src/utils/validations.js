@@ -17,7 +17,7 @@ export const isNumber = (value) => REGEX.IS_NUMBER_ONLY.test(value);
 export const isEmptyString = (value) => REGEX.IS_EMPTY_STRING.test(value);
 export const isUrl = (value) => REGEX.IS_URL.test(value);
 
-export const MISCurrentUser = () => {
+export const ExamHubCurrentUser = () => {
 
   const { loginToken, user, accesses } = useSelector(
     

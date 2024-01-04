@@ -3,7 +3,7 @@ import React from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 import { RequireAuth } from "./RequireAuth";
 import { WithoutAuth } from "./WithoutAuth";
-import { MISCurrentUser } from "utils/validations";
+import { ExamHubCurrentUser } from "utils/validations";
 
 
 // import {
@@ -61,7 +61,7 @@ import ErrorPage from "pages/ErrorPage";
 
 const MainRoute = () => {
   // Initial page, we can change this based on user role in future
-  // const { sessionToken, user } = MISCurrentUser();
+  // const { sessionToken, user } = ExamHubCurrentUser();
   // const userRole=get(user,"role","");
   const defaultPath = routes.app.login;
   // const redirectPath = sessionToken && userRole!==T.ACCOUNTANT && userRole!==T.SALES_MANAGER ?

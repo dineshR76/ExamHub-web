@@ -5,11 +5,11 @@ import {
   SUCCESS,
   ERROR,
   TEXT,
-  NETSMARTZ_THEME_COLOR,
+  EXAMHUB_THEME_COLOR,
   BORDER,
 } from "./colors";
 
-const bytMisTheme = createTheme({
+const examHubTheme = createTheme({
   typography: {
     body2: {
       fontSize: 12,
@@ -40,7 +40,7 @@ const bytMisTheme = createTheme({
       styleOverrides: {
         root: {
           svg: {
-            fill: NETSMARTZ_THEME_COLOR,
+            fill: EXAMHUB_THEME_COLOR,
           },
         },
       },
@@ -61,7 +61,7 @@ const bytMisTheme = createTheme({
       styleOverrides: {
         tooltip: {
           color: BACKGROUND.white,
-          backgroundColor: NETSMARTZ_THEME_COLOR,
+          backgroundColor: EXAMHUB_THEME_COLOR,
         },
       },
     },
@@ -78,9 +78,9 @@ const bytMisTheme = createTheme({
     success: SUCCESS,
     error: ERROR,
     text: TEXT,
-    themeColor: NETSMARTZ_THEME_COLOR,
+    themeColor: EXAMHUB_THEME_COLOR,
     border: BORDER,
   },
 });
 
-export default bytMisTheme;
+export default examHubTheme;

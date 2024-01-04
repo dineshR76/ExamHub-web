@@ -12,7 +12,7 @@ import {
   Typography,
 } from "@mui/material";
 
-import { NETSMARTZ_THEME_COLOR, BACKGROUND } from "theme/colors";
+import { EXAMHUB_THEME_COLOR, BACKGROUND } from "theme/colors";
 
 import { handleLogout } from "utils/logout";
 import T from "T";
@@ -83,7 +83,7 @@ const MenuButton = ({
 
           "& .MuiMenuItem-root": {
             "&:hover": {
-              backgroundColor: NETSMARTZ_THEME_COLOR,
+              backgroundColor: EXAMHUB_THEME_COLOR,
               color: BACKGROUND.white,
 
               img: {

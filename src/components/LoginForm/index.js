@@ -25,17 +25,15 @@ import { useLoginMutation } from "api/login";
 import { isEmail } from "utils/validations";
 import { handleError } from "utils/error";
 
-import { SUCCESS, ERROR, NETSMARTZ_THEME_COLOR } from "theme/colors";
+import { SUCCESS, ERROR, EXAMHUB_THEME_COLOR } from "theme/colors";
 
 import T from "T";
 
 import { get } from "utils/lodash";
 import { toast } from "react-toastify";
 import { loginStore } from "slices/loginSlice";
-import MISLoader from "components/common/MISLoader";
-import { memberFilterStore } from "slices/memberFilterSlice";
-import { memberSearchStore } from "slices/memberSearchSlice";
-import { savedFilterStore } from "slices/savedFilterSlice";
+import ExamHubLoader from "components/common/MISLoader";
+
 
 const LoginForm = () => {
   const navigate = useNavigate();
@@ -93,17 +91,11 @@ const LoginForm = () => {
         if (rememberMe)
         {
           dispatch(loginStore({ token, rememberMe, user, accesses }));
-          dispatch(memberFilterStore({storedFilters:{}}));
-          dispatch(memberSearchStore({storedSearchInput:""}));
-          dispatch(savedFilterStore({storedFilterId:""}));
         }
           
         else {
           sessionStorage.setItem("token", token);
           dispatch(loginStore({ rememberMe, user, accesses }));
-          dispatch(memberFilterStore({storedFilters:{}}));
-          dispatch(memberSearchStore({storedSearchInput:""}));
-          dispatch(savedFilterStore({storedFilterId:""}));
         }
 
         navigate("/app/members");
@@ -113,7 +105,7 @@ const LoginForm = () => {
 
   return (
     <Paper elevation={3} sx={{ p: "32px 20px" }}>
-      {isFetching && <MISLoader />}
+      {isFetching && <ExamHubLoader />}
       <Typography variant="h5" textAlign="center" mt={2} fontSize={22}>
         {T.LOGIN.toUpperCase()}
       </Typography>
@@ -212,7 +204,7 @@ const LoginForm = () => {
 
         <Link
           href={routes.app.forgotPwd}
-          color={NETSMARTZ_THEME_COLOR}
+          color={EXAMHUB_THEME_COLOR}
           underline="none"
         >
           <Typography variant="subtitle1" noWrap>
@@ -224,7 +216,7 @@ const LoginForm = () => {
       <Button
         variant="contained"
         sx={{
-          bgcolor: NETSMARTZ_THEME_COLOR,
+          bgcolor: EXAMHUB_THEME_COLOR,
           mt: 5,
           mb: 5,
           width: "100%",

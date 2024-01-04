@@ -10,7 +10,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import history from "providers/history";
 import { store, persistor } from "providers/store";
 import MainContainer from "components/MainContainer";
-import bytMisTheme from "theme";
+import examHubTheme from "theme";
 import MainRoute from "router";
 
 
@@ -21,7 +21,7 @@ const App = () => {
     <Provider store={store}>
       <PersistGate persistor={persistor}>
         <HelmetProvider>
-          <ThemeProvider theme={bytMisTheme}>
+          <ThemeProvider theme={examHubTheme}>
             <Router history={history}>
               <MainContainer>
                 <MainRoute />

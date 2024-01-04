@@ -1,8 +1,8 @@
 import { useLocation, Navigate } from "react-router-dom";
-import { MISCurrentUser } from "utils/validations";
+import { ExamHubCurrentUser } from "utils/validations";
 
 export const RequireAuth = ({ children }) => {
-  const { sessionToken } = MISCurrentUser();
+  const { sessionToken } = ExamHubCurrentUser();
   const location = useLocation();
 
   if (!sessionToken) {

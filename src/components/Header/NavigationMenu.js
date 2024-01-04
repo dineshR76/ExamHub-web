@@ -2,19 +2,16 @@ import React, { Children } from "react";
 
 import { useLocation } from "react-router-dom";
 import { Box, Tabs } from "@mui/material";
-
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import MenuIcon from "@mui/icons-material/Menu";
-
-import HeaderLogo from "assets/Header.png";
-import ProfileLogo from "assets/ProfileLogo.png";
-
 import { getAllMenuItems } from "./menuItems";
 import MenuButton from "./MenuButton";
 import NavItem from "./NavItem";
 import T from "T";
-import { MISCurrentUser } from "utils/validations";
+import { ExamHubCurrentUser } from "utils/validations";
 import { get } from "lodash";
+import HeaderLogo from "assets/Header.png";
+import ProfileLogo from "assets/Profile.png"
 
 const NavigationMenu = () => {
   const location = useLocation();
@@ -34,7 +31,7 @@ const NavigationMenu = () => {
 
     return childList.includes(pathname);
   };
-  const {user}= MISCurrentUser();
+  const {user}= ExamHubCurrentUser();
   const userName =get(user,"username","")
   
   const menuItems = getAllMenuItems();
@@ -59,11 +56,7 @@ const NavigationMenu = () => {
           value={activeIndex}
         >
           {
-            (userName==="nishu.garg@netsmartz.com" || userName==="nidhi.singla@netsmartz.com" ||
-            userName==="rahul.miglani@netsmartz.com" || userName==="nishant.sharma@netsmartz.net" ||
-            userName==="dinesh.reddy@netsmartz.net" || userName==="surinderpal.singh@netsmartz.net" ||
-            userName==="mohit.thapa@netsmartz.net" || userName==="abul.ala@netsmartz.net"||
-            userName==="himmat.pratap@netsmartz.com" || userName==="anup@netsmartz.com")?
+            (userName==="abul.ala@netsmartz.net" || userName==="dinesh.reddy@netsmartz.net" )?
             Children.toArray(
               menuItems
                 .filter((item, index) => index < 7)

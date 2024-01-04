@@ -1,13 +1,8 @@
 import React, { Children, useEffect } from "react";
 
 import { Grid, Box, Typography } from "@mui/material";
-
-import NetsmartzLogo from "assets/NetsmartzLogo.png";
-import LoginImage from "assets/LoginImage.png";
-import LoginImage2 from "assets/LoginImage-2.png";
 import LoginForm from "components/LoginForm";
-import MISCarousel from "components/common/MISCarousel";
-import { LOGIN_CAROUSAL_DATA } from "settings/constants/auth";
+
 import { clearCache } from "utils/clearCache";
 import T from "T";
 import { GET_SIZE } from "utils/responsive";

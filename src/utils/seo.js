@@ -12,13 +12,6 @@ const PAGE_TITLE = new Map([
   // override any existing route here
   [routes.app.forgotPwd, "Forgot Password"],
   [routes.app.changePwd, "Change Password"],
-  [routes.app.addRoles, "Add Role"],
-  [routes.app.addMembers, "Add Member"],
-  [routes.app.members, "Members"],
-  [routes.app.nonCompliance, "Non Compliance"],
-  [routes.app.masterSettings, "Master Settings"],
-  [routes.app.preSales, "Pre Sales"],
-  [routes.app.createNewProject, "Create Requirement"],
   ["default", "Error"],
 ]);
 

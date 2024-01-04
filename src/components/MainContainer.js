@@ -8,21 +8,21 @@ import { ToastContainer, Zoom } from "react-toastify";
 import Header from "components/Header/index.js";
 
 import { getPageTitle } from "utils/seo";
-import { MISCurrentUser } from "utils/validations";
+import { ExamHubCurrentUser } from "utils/validations";
 
 import { TOAST_DISMISS_TIMEOUT } from "settings/constants/toast";
 
 import T from "T";
 import "react-toastify/dist/ReactToastify.css";
 import { Box } from "@mui/material";
-import { BACKGROUND, NETSMARTZ_THEME_COLOR } from "theme/colors";
+import { BACKGROUND, EXAMHUB_THEME_COLOR } from "theme/colors";
 import { Typography } from "@mui/material";
 
 const MainContainer = ({ children }) => {
   const location = useLocation();
   const { pathname } = location;
 
-  const { sessionToken } = MISCurrentUser();
+  const { sessionToken } = ExamHubCurrentUser();
 
   return (
     <>
@@ -47,7 +47,7 @@ const MainContainer = ({ children }) => {
         transition={Zoom}
         theme="colored"
       />
-      {MISCurrentUser() && (
+      {ExamHubCurrentUser() && (
         <Box
           position="fixed"
           bottom={0}
@@ -58,7 +58,7 @@ const MainContainer = ({ children }) => {
           bgcolor={BACKGROUND.white}
           textAlign="center"
         >
-          <Typography variant="subtitle2" color={NETSMARTZ_THEME_COLOR}>
+          <Typography variant="subtitle2" color={EXAMHUB_THEME_COLOR}>
             {T.FOOTER_TEXT}
           </Typography>
         </Box>
